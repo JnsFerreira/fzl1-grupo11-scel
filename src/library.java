@@ -1,12 +1,19 @@
+package com.fatec.scel.model; 
 import java.util.ArrayList; 
 import java.util.List; 
 public class Biblioteca { 
- private List<Livro> livros = new ArrayList<>(); 
+ private List<Livro> livros = new ArrayList<Livro>(); 
  
- public void add(Livro livro) { 
- }
-  
+ public List<Livro> getLivros() { 
+ return livros; 
+ } 
+ public void setLivros(List<Livro> livros) { 
+ this.livros = livros; 
+ } 
+ public void save(Livro livro) { 
+ livros.add(livro); 
+ } 
  public int size() { 
-    return 1; 
+ return livros.size(); 
  } 
 }
